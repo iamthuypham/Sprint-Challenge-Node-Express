@@ -30,6 +30,9 @@ function projectToBody(project) {
 }
 
 function actionToBody(action) {
+  if (!action) {
+    return null
+  }
   return {
     ...action,
     completed: intToBoolean(action.completed),
